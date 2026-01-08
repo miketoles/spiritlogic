@@ -293,6 +293,146 @@ body.loaded .cta {
   }
 }
 
+/* Plugin page styles */
+.plugin-cards {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.plugin-card {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-height: 220px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.plugin-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.35);
+  border-color: var(--accent);
+}
+
+.plugin-icon {
+  color: var(--accent);
+  margin-bottom: 4px;
+}
+
+.plugin-tagline {
+  color: var(--accent-2);
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 0;
+}
+
+.plugin-format {
+  margin-top: auto;
+  font-size: 12px;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+nav a.active {
+  color: var(--accent);
+}
+
+.logo {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Plugin detail page */
+.plugin-hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+  margin-bottom: 80px;
+}
+
+.plugin-screenshot {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.plugin-screenshot img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.plugin-screenshot-placeholder {
+  width: 100%;
+  aspect-ratio: 620 / 480;
+  background: linear-gradient(135deg, var(--bg-soft), var(--card));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.plugin-meta {
+  display: flex;
+  gap: 24px;
+  margin-top: 24px;
+  flex-wrap: wrap;
+}
+
+.plugin-meta-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.plugin-meta-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--muted);
+}
+
+.plugin-meta-value {
+  font-size: 14px;
+  color: var(--text);
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+.feature-item {
+  background: var(--bg-soft);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.feature-item h4 {
+  font-size: 14px;
+  margin-bottom: 6px;
+  color: var(--text);
+}
+
+.feature-item p {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+@media (max-width: 900px) {
+  .plugin-hero {
+    grid-template-columns: 1fr;
+  }
+}
+
 @media (max-width: 720px) {
   .nav {
     flex-direction: column;
